@@ -1,7 +1,8 @@
-import { TbBusinessplan } from 'react-icons/tb'
+
 import { Link } from 'react-router-dom'
 import { connectWallet } from '../services/blockchain'
 import { truncate, useGlobalState } from '../store'
+import logoo from './project.png'
 
 const Header = () => {
   const [connectedAccount] = useGlobalState('connectedAccount')
@@ -13,11 +14,9 @@ const Header = () => {
     >
       <Link
         to="/"
-        className="flex justify-start items-center
-      text-xl text-black space-x-1"
       >
-        <span>Genesis</span>
-        <TbBusinessplan />
+        <img  style={{ width: 250, height: 50 }} src={logoo} alt="Logo" />
+        
       </Link>
 
       <div className="flex space-x-2 justify-center">

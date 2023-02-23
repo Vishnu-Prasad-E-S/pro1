@@ -158,7 +158,7 @@ const getBackers = async (id) => {
   }
 }
 
-const payoutProject = async (id) => {
+const payOutProject= async (id) => {
   try {
     if (!ethereum) return alert('Please install Metamask')
     const connectedAccount = getGlobalState('connectedAccount')
@@ -230,5 +230,5 @@ export {
   loadProject,
   backProject,
   getBackers,
-  payoutProject,
+  payOutProject,
 }

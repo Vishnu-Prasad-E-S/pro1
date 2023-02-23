@@ -1,5 +1,5 @@
-require('@nomiclabs/hardhat-waffle')
-require('dotenv').config()
+require('@nomiclabs/hardhat-waffle');
+require('dotenv').config();
 
 module.exports = {
   defaultNetwork: 'localhost',
@@ -7,7 +7,7 @@ module.exports = {
     localhost: {
       url: 'http://127.0.0.1:8545',
     },
-    goerli: {
+   goerli: {
       url: process.env.ENDPOINT_URL,
       accounts: [process.env.DEPLOYER_KEY]
     }

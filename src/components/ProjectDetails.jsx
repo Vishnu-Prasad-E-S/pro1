@@ -6,16 +6,16 @@ import {
   truncate,
   useGlobalState,
 } from '../store'
-import { payoutProject } from '../services/blockchain'
+import { payOutProject } from '../services/blockchain'
 
 const ProjectDetails = ({ project }) => {
   const [connectedAccount] = useGlobalState('connectedAccount')
   const expired = new Date().getTime() > Number(project?.expiresAt + '000')
 
   return (
-    <div className="pt-24 mb-5 px-6 flex justify-center">
+    <div  className="pt-24 mb-5 px-6 flex justify-center">
       <div className="flex justify-center flex-col md:w-2/3">
-        <div
+        <div 
           className="flex justify-start items-start
         sm:space-x-4 flex-wrap"
         >
@@ -113,7 +113,7 @@ const ProjectDetails = ({ project }) => {
                         className="inline-block px-6 py-2.5 bg-orange-600
                         text-white font-medium text-xs leading-tight uppercase
                         rounded-full shadow-md hover:bg-orange-700"
-                        onClick={() => payoutProject(project?.id)}
+                        onClick={() => payOutProject(project?.id)}
                       >
                         Payout
                       </button>
