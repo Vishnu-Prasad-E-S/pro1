@@ -6,6 +6,7 @@ import Project from './views/Project'
 import { isWallectConnected } from './services/blockchain'
 import { ToastContainer } from 'react-toastify'
 import Navbar from './components/Navbar'
+import chat from './components/chat'
 
 const App = () => {
   const [loaded, setLoaded] = useState(false)
@@ -19,6 +20,7 @@ const App = () => {
   return (
     <div className="min-h-screen relative">
       <Navbar />
+      <chat/>
       {loaded ? (
         <Routes>
           <Route path="/" element={<Home />} />
